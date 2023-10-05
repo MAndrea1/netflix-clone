@@ -1,4 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) experimental project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Learning from
+https://www.youtube.com/watch?v=ZVnjOPwW4ZA
+https://www.youtube.com/watch?v=cwqNAkwhKqw&t=2587s
+https://www.youtube.com/watch?v=i8PsGvDas-s
+https://developer.themoviedb.org/docs
+https://github.com/ducanhgh/next-pwa/
 
 ## Getting Started
 

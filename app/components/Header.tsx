@@ -6,6 +6,7 @@ import Image from "next/image"
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { BellIcon } from '@heroicons/react/24/outline'
 import Link from "next/link"
+import next from "../../public/next.svg"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -28,11 +29,9 @@ const Header = () => {
     }
   }, [])
 
-  console.log(isScrolled)
-
   return (
-    <header className={`${isScrolled && 'bg-gradient-to-b from-slate-950'}
-      fixed flex justify-between items-center w-full top-0 z-50 px-4 py-1 lg:px-16 lg:py-4 transition-all`}>
+    <header className={`${isScrolled && 'bg-slate-950'}
+      fixed flex justify-between items-center w-full top-0 z-50 px-4 py-1 lg:px-16 lg:py-4 transition-all bg-gradient-to-b from-slate-950`}>
 
       {/* 
         Tailwind is mobile first, so all styling will start for small screens, and then we apply breakpoints for bigger screens
