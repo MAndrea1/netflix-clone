@@ -1,0 +1,404 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/xFYpUmB01nswPgbzi8EOCT1ZYFu.jpg",
+      "genre_ids": [
+        12,
+        28,
+        18
+      ],
+      "id": 980489,
+      "original_language": "en",
+      "original_title": "Gran Turismo",
+      "overview": "The ultimate wish-fulfillment tale of a teenage Gran Turismo player whose gaming skills won him a series of Nissan competitions to become an actual professional racecar driver.",
+      "popularity": 2625.075,
+      "poster_path": "/51tqzRtKMMZEYUpSYkrUE7v9ehm.jpg",
+      "release_date": "2023-08-09",
+      "title": "Gran Turismo",
+      "video": false,
+      "vote_average": 8,
+      "vote_count": 828
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/pA3vdhadJPxF5GA1uo8OPTiNQDT.jpg",
+      "genre_ids": [
+        28,
+        18
+      ],
+      "id": 678512,
+      "original_language": "en",
+      "original_title": "Sound of Freedom",
+      "overview": "The story of Tim Ballard, a former US government agent, who quits his job in order to devote his life to rescuing children from global sex traffickers.",
+      "popularity": 3627.783,
+      "poster_path": "/qA5kPYZA7FkVvqcEfJRoOy4kpHg.jpg",
+      "release_date": "2023-07-03",
+      "title": "Sound of Freedom",
+      "video": false,
+      "vote_average": 8,
+      "vote_count": 636
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1syW9SNna38rSl9fnXwc9fP7POW.jpg",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "id": 565770,
+      "original_language": "en",
+      "original_title": "Blue Beetle",
+      "overview": "Recent college grad Jaime Reyes returns home full of aspirations for his future, only to find that home is not quite as he left it. As he searches to find his purpose in the world, fate intervenes when Jaime unexpectedly finds himself in possession of an ancient relic of alien biotechnology: the Scarab.",
+      "popularity": 1851.699,
+      "poster_path": "/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
+      "release_date": "2023-08-16",
+      "title": "Blue Beetle",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 1147
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8pjWz2lt29KyVGoq1mXYu6Br7dE.jpg",
+      "genre_ids": [
+        28,
+        878,
+        27
+      ],
+      "id": 615656,
+      "original_language": "en",
+      "original_title": "Meg 2: The Trench",
+      "overview": "An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.",
+      "popularity": 1177.938,
+      "poster_path": "/4m1Au3YkjqsxF8iwQy0fPYSxE0h.jpg",
+      "release_date": "2023-08-02",
+      "title": "Meg 2: The Trench",
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 2121
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iiXliCeykkzmJ0Eg9RYJ7F2CWSz.jpg",
+      "genre_ids": [
+        28,
+        9648,
+        53,
+        80
+      ],
+      "id": 762430,
+      "original_language": "en",
+      "original_title": "Retribution",
+      "overview": "When a mysterious caller puts a bomb under his car seat, Matt Turner begins a high-speed chase across the city to complete a specific series of tasks. With his kids trapped in the back seat and a bomb that will explode if they get out of the car, a normal commute becomes a twisted game of life or death as Matt follows the stranger's increasingly dangerous instructions in a race against time to save his family.",
+      "popularity": 1006.352,
+      "poster_path": "/oUmmY7QWWn7OhKlcPOnirHJpP1F.jpg",
+      "release_date": "2023-08-23",
+      "title": "Retribution",
+      "video": false,
+      "vote_average": 6.8,
+      "vote_count": 285
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "id": 385687,
+      "original_language": "en",
+      "original_title": "Fast X",
+      "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
+      "popularity": 898.538,
+      "poster_path": "/fiVW06jE7z9YnO4trhaMEdclSiC.jpg",
+      "release_date": "2023-05-17",
+      "title": "Fast X",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 3932
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1DBo2V4KyBWXuagt4JOR2jZJMHB.jpg",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 1171541,
+      "original_language": "en",
+      "original_title": "Sniper: G.R.I.T. - Global Response & Intelligence Team",
+      "overview": "When an international terrorist cult threatens global political stability and kidnaps a fellow agent, Ace Sniper Brandon Beckett and the newly-formed Global Response & Intelligence Team – or G.R.I.T. – led by Colonel Stone must travel across the world to Malta, infiltrate the cult, and take out its leader to free Lady Death and stop the global threat.",
+      "popularity": 870.024,
+      "poster_path": "/gcd5TJwXLWeQ2Dn0aRxI8OJIIxK.jpg",
+      "release_date": "2023-09-26",
+      "title": "Sniper: G.R.I.T. - Global Response & Intelligence Team",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 18
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lNxR7SmtFxFUfA7n9qtzuaIYvoM.jpg",
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
+      "id": 926393,
+      "original_language": "en",
+      "original_title": "The Equalizer 3",
+      "overview": "Robert McCall finds himself at home in Southern Italy but he discovers his friends are under the control of local crime bosses. As events turn deadly, McCall knows what he has to do: become his friends' protector by taking on the mafia.",
+      "popularity": 979.222,
+      "poster_path": "/b0Ej6fnXAP8fK75hlyi2jKqdhHz.jpg",
+      "release_date": "2023-08-30",
+      "title": "The Equalizer 3",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 396
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9WxqnP9c29wXd03sALSpxpTx8fk.jpg",
+      "genre_ids": [
+        9648,
+        53,
+        28
+      ],
+      "id": 1172009,
+      "original_language": "en",
+      "original_title": "The Black Book",
+      "overview": "After his son is wrongly accused of kidnapping, a deacon who has just lost his wife takes matters into his own hands and fights a crooked police gang to clear him.",
+      "popularity": 662.07,
+      "poster_path": "/kn28W24slBLyGr8ZIZnxNE5YZrY.jpg",
+      "release_date": "2023-09-22",
+      "title": "The Black Book",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 25
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2wUJGxE43jhTKpNMVbWEC2WNJjH.jpg",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 1034587,
+      "original_language": "te",
+      "original_title": "అమిగోస్",
+      "overview": "Siddharth, a youngman who runs a family business is astonished to find his doppelgängers Manjunath and Michael on getdopple.com. After meeting up in Goa, they come down to Hyderabad to help Siddarth win over Ishika, a girl looking for superman to be her husband. But things take a drastic turn when NIA swings into action to nab Michael, aka Bipin Roy.",
+      "popularity": 585.478,
+      "poster_path": "/mhPhEvh2ffBdbgiSIjrlkqAGwNH.jpg",
+      "release_date": "2023-02-10",
+      "title": "Amigos",
+      "video": false,
+      "vote_average": 4.4,
+      "vote_count": 5
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2vFuG6bWGyQUzYS9d69E5l85nIz.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 667538,
+      "original_language": "en",
+      "original_title": "Transformers: Rise of the Beasts",
+      "overview": "When a new threat capable of destroying the entire planet emerges, Optimus Prime and the Autobots must team up with a powerful faction known as the Maximals. With the fate of humanity hanging in the balance, humans Noah and Elena will do whatever it takes to help the Transformers as they engage in the ultimate battle to save Earth.",
+      "popularity": 569.179,
+      "poster_path": "/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+      "release_date": "2023-06-06",
+      "title": "Transformers: Rise of the Beasts",
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 3300
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/35z8hWuzfFUZQaYog8E9LsXW3iI.jpg",
+      "genre_ids": [
+        12,
+        28
+      ],
+      "id": 335977,
+      "original_language": "en",
+      "original_title": "Indiana Jones and the Dial of Destiny",
+      "overview": "Finding himself in a new era, and approaching retirement, Indy wrestles with fitting into a world that seems to have outgrown him. But as the tentacles of an all-too-familiar evil return in the form of an old rival, Indy must don his hat and pick up his whip once more to make sure an ancient and powerful artifact doesn't fall into the wrong hands.",
+      "popularity": 551.022,
+      "poster_path": "/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg",
+      "release_date": "2023-06-28",
+      "title": "Indiana Jones and the Dial of Destiny",
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 1803
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iQcCAm8hKWZyUntqrvzyEGtXyJl.jpg",
+      "genre_ids": [
+        878,
+        28,
+        53
+      ],
+      "id": 670292,
+      "original_language": "en",
+      "original_title": "The Creator",
+      "overview": "Amid a future war between the human race and the forces of artificial intelligence, a hardened ex-special forces agent grieving the disappearance of his wife, is recruited to hunt down and kill the Creator, the elusive architect of advanced AI who has developed a mysterious weapon with the power to end the war—and mankind itself.",
+      "popularity": 392.423,
+      "poster_path": "/vBZ0qvaRxqEhZwl6LWmruJqWE8Z.jpg",
+      "release_date": "2023-09-27",
+      "title": "The Creator",
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 230
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg",
+      "genre_ids": [
+        16,
+        28,
+        12
+      ],
+      "id": 569094,
+      "original_language": "en",
+      "original_title": "Spider-Man: Across the Spider-Verse",
+      "overview": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+      "popularity": 480.62,
+      "poster_path": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      "release_date": "2023-05-31",
+      "title": "Spider-Man: Across the Spider-Verse",
+      "video": false,
+      "vote_average": 8.4,
+      "vote_count": 4452
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/628Dep6AxEtDxjZoGP78TsOxYbK.jpg",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 575264,
+      "original_language": "en",
+      "original_title": "Mission: Impossible - Dead Reckoning Part One",
+      "overview": "Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the world's fate at stake and dark forces from Ethan's past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission—not even the lives of those he cares about most.",
+      "popularity": 473.828,
+      "poster_path": "/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+      "release_date": "2023-07-08",
+      "title": "Mission: Impossible - Dead Reckoning Part One",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 1211
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/c6Splshb8lb2Q9OvUfhpqXl7uP0.jpg",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 717930,
+      "original_language": "en",
+      "original_title": "Kandahar",
+      "overview": "After his mission is exposed, an undercover CIA operative stuck deep in hostile territory in Afghanistan must fight his way out, alongside his Afghan translator, to an extraction point in Kandahar, all whilst avoiding elite enemy forces and foreign spies tasked with hunting them down.",
+      "popularity": 466.751,
+      "poster_path": "/lCanGgsqF4xD2WA5NF8PWeT3IXd.jpg",
+      "release_date": "2023-05-25",
+      "title": "Kandahar",
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 599
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uAAAzo9efEZJJPtj4iNwFvrRaki.jpg",
+      "genre_ids": [
+        28,
+        80,
+        878,
+        18
+      ],
+      "id": 744278,
+      "original_language": "it",
+      "original_title": "Mondocane",
+      "overview": "In the near future, the southern Italian city of Taranto is surrounded by barbed wire that no one, not even the police, dares to cross. The poorest are left fighting for survival, while gangs compete for the territory. Two thirteen-year-old orphans who grew up together, dream of joining one of the gangs.",
+      "popularity": 463.099,
+      "poster_path": "/gOuJBz9u1YVWwvx12lJX56yUT6I.jpg",
+      "release_date": "2021-09-03",
+      "title": "Mondocane",
+      "video": false,
+      "vote_average": 6.4,
+      "vote_count": 119
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yF1eOkaYvwiORauRCPWznV9xVvi.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 298618,
+      "original_language": "en",
+      "original_title": "The Flash",
+      "overview": "When his attempt to save his family inadvertently alters the future, Barry Allen becomes trapped in a reality in which General Zod has returned and there are no Super Heroes to turn to. In order to save the world that he is in and return to the future that he knows, Barry's only hope is to race for his life. But will making the ultimate sacrifice be enough to reset the universe?",
+      "popularity": 427.752,
+      "poster_path": "/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+      "release_date": "2023-06-13",
+      "title": "The Flash",
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 2989
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7I6VUdPj6tQECNHdviJkUHD2u89.jpg",
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
+      "id": 603692,
+      "original_language": "en",
+      "original_title": "John Wick: Chapter 4",
+      "overview": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+      "popularity": 419.934,
+      "poster_path": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+      "release_date": "2023-03-22",
+      "title": "John Wick: Chapter 4",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 4667
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6fKEw0I2FTD5FLOQ5q7L1tqf876.jpg",
+      "genre_ids": [
+        10751,
+        35,
+        28,
+        12
+      ],
+      "id": 790493,
+      "original_language": "en",
+      "original_title": "Spy Kids: Armageddon",
+      "overview": "When the children of the world’s greatest secret agents unwittingly help a powerful game developer unleash a computer virus that gives him control of all technology, they must become spies themselves to save their parents and the world.",
+      "popularity": 360.987,
+      "poster_path": "/vd8YdaH7dzeIMGTNwQinlSiA1gV.jpg",
+      "release_date": "2023-09-22",
+      "title": "Spy Kids: Armageddon",
+      "video": false,
+      "vote_average": 6.6,
+      "vote_count": 64
+    }
+  ],
+  "total_pages": 1875,
+  "total_results": 37487
+}

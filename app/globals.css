@@ -24,3 +24,18 @@
     @apply py-0 px-3 text-xs bg-white hover:bg-stone-300 text-black font-bold rounded shadow-lg flex items-center md:py-1 md:px-4 md:text-lg lg:py-2 lg:px-7 lg:text-xl
   }
 }
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
