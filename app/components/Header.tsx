@@ -6,7 +6,6 @@ import Image from "next/image"
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { BellIcon } from '@heroicons/react/24/outline'
 import Link from "next/link"
-import next from "../../public/next.svg"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)

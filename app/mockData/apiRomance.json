@@ -1,0 +1,398 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/jkKVLzLWjSvTnc84VzeljhSy6j8.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 820525,
+      "original_language": "en",
+      "original_title": "After Everything",
+      "overview": "Besieged by writer’s block and the crushing breakup with Tessa, Hardin travels to Portugal in search of a woman he wronged in the past – and to find himself. Hoping to win back Tessa, he realizes he needs to change his ways before he can make the ultimate commitment.",
+      "popularity": 886.683,
+      "poster_path": "/uQxjZGU6rxSPSMeAJPJQlmfV3ys.jpg",
+      "release_date": "2023-09-13",
+      "title": "After Everything",
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 95
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg",
+      "genre_ids": [
+        16,
+        35,
+        10751,
+        14,
+        10749
+      ],
+      "id": 976573,
+      "original_language": "en",
+      "original_title": "Elemental",
+      "overview": "In a city where fire, water, land and air residents live together, a fiery young woman and a go-with-the-flow guy will discover something elemental: how much they have in common.",
+      "popularity": 637.63,
+      "poster_path": "/4Y1WNkd88JXmGfhtWR7dmDAo1T2.jpg",
+      "release_date": "2023-06-14",
+      "title": "Elemental",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 2507
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7VEUOEfRzzrQfWddlIyLUKvh6Nf.jpg",
+      "genre_ids": [
+        12,
+        10751,
+        14,
+        10749
+      ],
+      "id": 447277,
+      "original_language": "en",
+      "original_title": "The Little Mermaid",
+      "overview": "The youngest of King Triton’s daughters, and the most defiant, Ariel longs to find out more about the world beyond the sea, and while visiting the surface, falls for the dashing Prince Eric. With mermaids forbidden to interact with humans, Ariel makes a deal with the evil sea witch, Ursula, which gives her a chance to experience life on land, but ultimately places her life – and her father’s crown – in jeopardy.",
+      "popularity": 301.098,
+      "poster_path": "/ym1dxyOk4jFcSl4Q2zmRrA5BEEN.jpg",
+      "release_date": "2023-05-18",
+      "title": "The Little Mermaid",
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 2172
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lntyt4OVDbcxA1l7LtwITbrD3FI.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 1010581,
+      "original_language": "es",
+      "original_title": "Culpa mía",
+      "overview": "Noah must leave her city, boyfriend, and friends to move into William Leister's mansion, the flashy and wealthy husband of her mother Rafaela. As a proud and independent 17 year old, Noah resists living in a mansion surrounded by luxury. However, it is there where she meets Nick, her new stepbrother, and the clash of their strong personalities becomes evident from the very beginning.",
+      "popularity": 280.731,
+      "poster_path": "/w46Vw536HwNnEzOa7J24YH9DPRS.jpg",
+      "release_date": "2023-06-08",
+      "title": "My Fault",
+      "video": false,
+      "vote_average": 8.1,
+      "vote_count": 1753
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/j1bOCozOQOxJpk0iAQbJDS2w8OJ.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 1081676,
+      "original_language": "pl",
+      "original_title": "Znachor",
+      "overview": "A once-respected surgeon who's lost his family and his memory gets a chance at redemption when he reconnects with someone from his forgotten past.",
+      "popularity": 231.04,
+      "poster_path": "/tqXqhp0MaDi0SkcN20iNuobXIKs.jpg",
+      "release_date": "2023-09-27",
+      "title": "Forgotten Love",
+      "video": false,
+      "vote_average": 8.3,
+      "vote_count": 51
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kZvYVhYYVL4MxLbDeBo9QJd0LRh.jpg",
+      "genre_ids": [
+        10749,
+        35,
+        18
+      ],
+      "id": 1167725,
+      "original_language": "en",
+      "original_title": "Love Is in the Air",
+      "overview": "A fiercely independent pilot fighting to keep her family business afloat starts to fall for the man sent by corporate to ground her operation forever.",
+      "popularity": 225.165,
+      "poster_path": "/cAn1tvopkqATQ0AfV4LK08ReAvp.jpg",
+      "release_date": "2023-09-28",
+      "title": "Love Is in the Air",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 29
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rRcNmiH55Tz0ugUsDUGmj8Bsa4V.jpg",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 884605,
+      "original_language": "en",
+      "original_title": "No Hard Feelings",
+      "overview": "On the brink of losing her childhood home, Maddie discovers an intriguing job listing: wealthy helicopter parents looking for someone to “date” their introverted 19-year-old son, Percy, before he leaves for college. To her surprise, Maddie soon discovers the awkward Percy is no sure thing.",
+      "popularity": 197.817,
+      "poster_path": "/gD72DhJ7NbfxvtxGiAzLaa0xaoj.jpg",
+      "release_date": "2023-06-15",
+      "title": "No Hard Feelings",
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 1422
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iEFuHjqrE059SmflBva1JzDJutE.jpg",
+      "genre_ids": [
+        16,
+        10751,
+        28,
+        14,
+        10749
+      ],
+      "id": 496450,
+      "original_language": "fr",
+      "original_title": "Miraculous - le film",
+      "overview": "A life of an ordinary Parisian teenager Marinette goes superhuman when she becomes Ladybug. Bestowed with magical powers of creation, Ladybug must unite with her opposite, Cat Noir, to save Paris as a new villain unleashes chaos unto the city.",
+      "popularity": 186.425,
+      "poster_path": "/bBON9XO9Ek0DjRwMBnJNCwC96Cd.jpg",
+      "release_date": "2023-07-05",
+      "title": "Miraculous: Ladybug & Cat Noir, The Movie",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 597
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/997ToEZvF2Obp9zNZbY5ELVnmrW.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 537915,
+      "original_language": "en",
+      "original_title": "After",
+      "overview": "Tessa Young is a dedicated student, dutiful daughter and loyal girlfriend to her high school sweetheart. Entering her first semester of college, Tessa's guarded world opens up when she meets Hardin Scott, a mysterious and brooding rebel who makes her question all she thought she knew about herself -- and what she wants out of life.",
+      "popularity": 186.307,
+      "poster_path": "/u3B2YKUjWABcxXZ6Nm9h10hLUbh.jpg",
+      "release_date": "2019-04-11",
+      "title": "After",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 7789
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rwgmDkIEv8VjAsWx25ottJrFvpO.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 744276,
+      "original_language": "en",
+      "original_title": "After Ever Happy",
+      "overview": "As a shocking truth about a couple's families emerges, the two lovers discover they are not so different from each other. Tessa is no longer the sweet, simple, good girl she was when she met Hardin — any more than he is the cruel, moody boy she fell so hard for.",
+      "popularity": 183.988,
+      "poster_path": "/moogpu8rNkEjTgFyLXwhPghft5w.jpg",
+      "release_date": "2022-08-24",
+      "title": "After Ever Happy",
+      "video": false,
+      "vote_average": 6.8,
+      "vote_count": 998
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mxdiaM2tsx8M6W3zLgiPwAkhQfq.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 744275,
+      "original_language": "en",
+      "original_title": "After We Fell",
+      "overview": "Just as Tessa's life begins to become unglued, nothing is what she thought it would be. Not her friends nor her family. The only person that she should be able to rely on is Hardin, who is furious when he discovers the massive secret that she's been keeping. Before Tessa makes the biggest decision of her life, everything changes because of revelations about her family.",
+      "popularity": 171.396,
+      "poster_path": "/dU4HfnTEJDf9KvxGS9hgO7BVeju.jpg",
+      "release_date": "2021-09-01",
+      "title": "After We Fell",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 2315
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eiIvFiqOClwNX3nUmRlEmNarFCk.jpg",
+      "genre_ids": [
+        10749,
+        35
+      ],
+      "id": 1001811,
+      "original_language": "en",
+      "original_title": "My Big Fat Greek Wedding 3",
+      "overview": "Following the death of their patriarch Gus, the Portokalos family travels to Greece for a family reunion, and to deliver Gus' journal to his old friends.",
+      "popularity": 154.103,
+      "poster_path": "/irEqWPmDqCuzsItzefFxX3xWpL8.jpg",
+      "release_date": "2023-09-07",
+      "title": "My Big Fat Greek Wedding 3",
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 37
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6hgItrYQEG33y0I7yP2SRl2ei4w.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 613504,
+      "original_language": "en",
+      "original_title": "After We Collided",
+      "overview": "Tessa finds herself struggling with her complicated relationship with Hardin; she faces a dilemma that could change their lives forever.",
+      "popularity": 143.226,
+      "poster_path": "/kiX7UYfOpYrMFSAGbI6j1pFkLzQ.jpg",
+      "release_date": "2020-09-02",
+      "title": "After We Collided",
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 5057
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tkWDQppuVNXOxR6ICqESsKCthOm.jpg",
+      "genre_ids": [
+        10749,
+        14,
+        16
+      ],
+      "id": 3933,
+      "original_language": "en",
+      "original_title": "Corpse Bride",
+      "overview": "Set in a 19th-century European village, this stop-motion animation feature follows the story of Victor, a young man whisked away to the underworld and wed to a mysterious corpse bride, while his real bride Victoria waits bereft in the land of the living.",
+      "popularity": 143.045,
+      "poster_path": "/isb2Qow76GpqYmsSyfdMfsYAjts.jpg",
+      "release_date": "2005-09-12",
+      "title": "Corpse Bride",
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 8232
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zktWfwV8CiNTSbKSqc9r5NpHbji.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 852881,
+      "original_language": "ko",
+      "original_title": "예쁜 여동생 4",
+      "overview": "Jeong-woo who is tired of instant food and living alone decides to order delivery food. However, Ga-yeong, the delivery driver, is unfriendly even if she was late. To criticize Ga-yeong sarcastically, he asks, \"Will you do everything if I give you money?\" Ga-yeong takes the words seriously and attacks Jeong-woo's house. Woo-hyeon is questioning the woman's underwear found at the house of Hyeon-min who came to play at Jeong-woo's house, and learns the situation through Ga-yeong who just came. He said he was better than Jeong-woo. However, Ga-yeong is already full of thoughts of eating both of them.",
+      "popularity": 131.393,
+      "poster_path": "/bhozm1Mjn1bkfiwukK5EUj3ecfI.jpg",
+      "release_date": "2021-01-15",
+      "title": "Pretty Young Sister 4",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 3
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rR2GExalTYxsnWJs7MKc922vIib.jpg",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 962664,
+      "original_language": "en",
+      "original_title": "Love Accidentally",
+      "overview": "Alexa and Jason are competing for a position at an advertising firm when their partners break up with them. Alexa mistakenly texts Jason, and they start a phone-only relationship. When they meet and the truth comes out, will true love prevail?",
+      "popularity": 116.965,
+      "poster_path": "/6D32ZGpoiDhRlcx95CHjDgkftYi.jpg",
+      "release_date": "2022-07-15",
+      "title": "Love Accidentally",
+      "video": false,
+      "vote_average": 6.4,
+      "vote_count": 26
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5Jfk2p3iGrChUKkl0cBD5krr2u8.jpg",
+      "genre_ids": [
+        16,
+        10749
+      ],
+      "id": 998731,
+      "original_language": "ja",
+      "original_title": "映画 佐々木と宮野ー卒業編ー",
+      "overview": "Miyano’s world of Boys’ Love manga turns to reality when chance leads him to Sasaki. Now, Sasaki wants to spend every opportunity with him.",
+      "popularity": 113.003,
+      "poster_path": "/xjZjNaUVF9mX7ekOL3lvBUi72eQ.jpg",
+      "release_date": "2023-02-17",
+      "title": "Sasaki and Miyano: Graduation",
+      "video": false,
+      "vote_average": 6.3,
+      "vote_count": 20
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/b9UCfDzwiWw7mIFsIQR9ZJUeh7q.jpg",
+      "genre_ids": [
+        28,
+        35,
+        10749
+      ],
+      "id": 868759,
+      "original_language": "en",
+      "original_title": "Ghosted",
+      "overview": "Salt-of-the-earth Cole falls head over heels for enigmatic Sadie — but then makes the shocking discovery that she’s a secret agent. Before they can decide on a second date, Cole and Sadie are swept away on an international adventure to save the world.",
+      "popularity": 111.996,
+      "poster_path": "/liLN69YgoovHVgmlHJ876PKi5Yi.jpg",
+      "release_date": "2023-04-18",
+      "title": "Ghosted",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 1327
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xyWKrni8WrYzqn7ztvI5nIY0h62.jpg",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 1181678,
+      "original_language": "es",
+      "original_title": "¿Quieres ser mi… hijo?",
+      "overview": "Tells the tale of Lu, a conformist woman in her forties who one day learns that her 15-year partner has been having extramarital affairs. Starting from scratch, she gets involved in an unexpected relationship with a young womanizer.",
+      "popularity": 111.138,
+      "poster_path": "/6cZbQppNSELFdsV7gvrOflL6DWK.jpg",
+      "release_date": "2023-09-21",
+      "title": "Do You Want to Be My Son?",
+      "video": false,
+      "vote_average": 8.9,
+      "vote_count": 94
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/30TgnSvXiL7NQoQ5WWwHqw0FRhA.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 48650,
+      "original_language": "es",
+      "original_title": "Habitación en Roma",
+      "overview": "A hotel room in the center of Rome serves as the setting for Alba and Natasha, two young and recently acquainted women, to have a physical adventure that touches their very souls.",
+      "popularity": 105.403,
+      "poster_path": "/gx2ENSap1D4nbjcz7cLLAs4S3fy.jpg",
+      "release_date": "2010-05-07",
+      "title": "Room in Rome",
+      "video": false,
+      "vote_average": 6.4,
+      "vote_count": 614
+    }
+  ],
+  "total_pages": 2306,
+  "total_results": 46104
+}

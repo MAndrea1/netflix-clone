@@ -1,29 +1,39 @@
 // page.tsx
 
 import Banner from "./components/Banner"
-import requests from "./utils/fetchRequests"
+import {requests, fetchData} from "./utils/fetchRequests"
 import dataPopular from './mockData/apiPopular.json'
-import dataNowPlaying from './mockData/apiNowPlaying.json'
+import dataUpcoming from './mockData/apiUpcoming.json'
+import dataRomance from './mockData/apiRomance.json'
+import { Movie } from "@/typings";
 
 export default async function Home() {
-  let fetchPopular, fetchNowPlaying;
-
+  let fetchPopular: Movie[];
+  let fetchUpcomingURL: Movie[];
+  let fetchromanceURL: Movie[];
+  
   if (process.env.DEVELOPMENT_MODE === 'true') {
     // Use mock data for development
-    fetchPopular = dataPopular;
-    fetchNowPlaying = dataNowPlaying;
+    fetchPopular = dataPopular.results;
+    fetchUpcomingURL = dataUpcoming.results;
+    fetchromanceURL = dataRomance.results;
   } else {
     // Fetch real data for production
-    [fetchPopular, fetchNowPlaying] = await Promise.all([
-      fetch(requests.fetchPopularURL, requests.fetchGETOptions).then((res) => res.json().catch(err => console.error('error:' + err))),
-      fetch(requests.fetchNowPlayingURL, requests.fetchGETOptions).then((res) => res.json().catch(err => console.error('error:' + err))),
+    [fetchPopular, fetchUpcomingURL, fetchromanceURL] = await Promise.all([
+      fetchData(requests.fetchPopularURL, requests.fetchGETOptions),
+      fetchData(requests.fetchUpcomingURL, requests.fetchGETOptions),
+      fetchData(requests.fetchRomanceURL, requests.fetchGETOptions),
     ]);
   }
+
+  console.log(fetchPopular[0].title)
+  console.log(fetchUpcomingURL[0].title)
+  console.log(fetchromanceURL[0].title)
  
   return (
     <>
-      <main className="relative flex min-h-screen flex-col items-center bg-red-600">
-        <Banner/>
+      <main className="relative flex min-h-screen flex-col">
+        <Banner fetchPopular={fetchPopular}/>
         <section>
           <p>row</p>
           <p>row</p>
