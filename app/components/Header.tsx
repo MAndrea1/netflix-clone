@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <header className={`${isScrolled && 'bg-slate-950'}
-      fixed flex justify-between items-center w-full top-0 z-50 px-4 py-1 lg:px-16 lg:py-4 transition-all bg-gradient-to-b from-slate-950`}>
+      fixed flex justify-between items-center w-full top-0 z-50 px-4 py-1 md:py-3 lg:px-16 lg:py-4 transition-all bg-gradient-to-b from-slate-950`}>
 
       {/* 
         Tailwind is mobile first, so all styling will start for small screens, and then we apply breakpoints for bigger screens
@@ -49,7 +49,7 @@ const Header = () => {
       */}
         <ul className="hidden md:flex space-x-6">
           {/* To style multiple elements, we'll create a custom class "headerLink". We'll complete this style in globals.css */}
-          <li className="headerLink">Home</li>
+          <li className="headerLink"><Link href={"/"}>Home</Link></li>
           <li className="headerLink">TV Shows</li>
           <li className="headerLink">Movies</li>
           <li className="headerLink">New</li>
