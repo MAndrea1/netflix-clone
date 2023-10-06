@@ -8,8 +8,11 @@ import Header from './components/Header'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'The Netflix Clone',
-  description: 'A Netflix clone, meow',
+  title: 'A Netflix Clone',
+  description: 'A Netflix clone description',
+  icons: {
+    icon: 'https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico',
+  },  
 }
 
 export default function RootLayout({

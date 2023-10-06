@@ -1,10 +1,7 @@
-'use client'
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Movie } from '@/typings'
 import { getRandomElement } from '../utils/utilFuncions'
 import { baseUrlImage } from '../utils/fetchRequests'
-import { InformationCircleIcon } from '@heroicons/react/24/outline'
 
 // Added to avoid the "fetchPopular is not assignable to type 'intrinsicattributes'" error.
 type movieList = {
@@ -12,12 +9,7 @@ type movieList = {
 }
 
 const banner = ({fetchPopular}: movieList) => {
-  const [featuredMovie, setfeaturedMovie] = useState<Movie|null>(null)
-
-  // Perhaps we can turn into a server-side component and avoid using useEffect and useState here?
-  useEffect(() => {
-    setfeaturedMovie(getRandomElement(fetchPopular))
-  }, [fetchPopular])
+  const featuredMovie = getRandomElement(fetchPopular)
 
   return (
     <div className='flex flex-col align-bottom h-60 md:h-[55vh] lg:h-[95vh]'>
@@ -31,6 +23,7 @@ const banner = ({fetchPopular}: movieList) => {
           alt={`${featuredMovie?.title}`}
           priority={true}
         ></Image>
+        <div className='absolute bottom-0 w-full h-28 md:h-[32vh] lg:h-[55vh] -z-0 bg-gradient-to-t from-slate-950'></div>
       </div>
       <div className='mt-auto px-8 mb-16 md:mb-24 lg:mb-52 lg:px-20'>
         <h1 className='drop-shadow-lg font-bold text-xl md:text-4xl md:mb-3 lg:text-6xl'>{featuredMovie?.title}</h1>
