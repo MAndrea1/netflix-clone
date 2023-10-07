@@ -11,6 +11,7 @@ import dataAction from './mockData/apiAction.json'
 import dataAnimation from './mockData/apiAnimation.json'
 import { Movie } from "@/typings";
 import CatalogueRow from "./components/CatalogueRow"
+import DisplayScreen from "./components/DisplayScreen"
 
 export default async function Home() {
   let fetchPopular: Movie[];
@@ -48,7 +49,7 @@ export default async function Home() {
       fetchData(requests.fetchAnimationURL, requests.fetchGETOptions),
     ]);
   }
- 
+
   return (
     <>
       <main className="relative flex min-h-screen flex-col">
@@ -61,6 +62,7 @@ export default async function Home() {
           <CatalogueRow title="Action" movieList={fetchActionURL}/>
           <CatalogueRow title="Animation" movieList={fetchAnimationURL}/>
         </section>
+        <h1><DisplayScreen/></h1>
       </main>
     </>
   )

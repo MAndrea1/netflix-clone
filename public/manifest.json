@@ -1,0 +1,41 @@
+{
+  "name": "A Netflix PWA App",
+  "short_name": "Netflix PWA",
+  "description": "An installable PWA Netflix clone",
+  "theme_color": "#d10404",
+  "background_color": "#0c0a09",  
+  "display": "minimal-ui",
+  "id": "/NetflixPWA",
+  "scope": "/",  
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"      
+    },
+    {
+      "src": "/icons/icon-1024x1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "screenshots": [
+    {
+        "src": "images/screenshot.png",
+        "type": "image/png",
+        "sizes": "360x740"
+    }
+  ]
+}
