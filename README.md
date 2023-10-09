@@ -7,6 +7,9 @@ https://www.youtube.com/watch?v=i8PsGvDas-s
 https://developer.themoviedb.org/docs
 https://github.com/ducanhgh/next-pwa/
 
+Notes:
+
+
 ## Getting Started
 
 First, run the development server:

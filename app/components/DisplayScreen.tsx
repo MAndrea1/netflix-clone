@@ -9,7 +9,7 @@ function DisplayModeDetector() {
       if (window.matchMedia('(display-mode: browser)').matches) {
         setDisplayMode("browser")
       } else if (window.matchMedia('(display-mode:  minimal-ui)').matches) {
-        setDisplayMode(" minimal-ui")
+        setDisplayMode("minimal-ui")
       } else {
         setDisplayMode("not browser or minimal-ui")
       }

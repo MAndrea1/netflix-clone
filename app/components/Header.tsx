@@ -6,9 +6,11 @@ import Image from "next/image"
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { BellIcon } from '@heroicons/react/24/outline'
 import Link from "next/link"
+import InstallApp from "./InstallApp"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,13 +49,14 @@ const Header = () => {
       {/* 
         Again, here we are hiding the menu and only showing it in bigger screens
       */}
-        <ul className="hidden md:flex space-x-6">
+        <ul className="md:flex space-x-6 items-center">
           {/* To style multiple elements, we'll create a custom class "headerLink". We'll complete this style in globals.css */}
           <li className="headerLink"><Link href={"/"}>Home</Link></li>
           <li className="headerLink">TV Shows</li>
           <li className="headerLink">Movies</li>
           <li className="headerLink">New</li>
           <li className="headerLink">My List</li>
+          <InstallApp/>
         </ul>
       </div>
 
