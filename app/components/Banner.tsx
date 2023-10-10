@@ -23,7 +23,7 @@ const banner = ({fetchPopular}: movieList) => {
           alt={`${featuredMovie?.title}`}
           priority={true}
         ></Image>
-        <div className='absolute bottom-0 w-full h-28 md:h-[32vh] lg:h-[55vh] -z-0 bg-gradient-to-t from-slate-950'></div>
+        <div className='absolute bg-gradient-to-t from-stone-950 from-20% bottom-0 w-full h-28 md:h-[32vh] lg:h-[55vh] z-0'></div>
       </div>
       <div className='mt-auto px-8 mb-16 md:mb-24 lg:mb-52 lg:px-20'>
         <h1 className='drop-shadow-lg font-bold text-xl md:text-4xl md:mb-3 lg:text-6xl'>{featuredMovie?.title}</h1>
