@@ -21,10 +21,9 @@ const nextConfig = {
 
 const withPWA = require("@ducanh2912/next-pwa").default({
   dest: "public",
-  fallbacks: {
-    // This is for images.
-    image: "/static/images/fallback.png",
-  },  
+  // fallbacks: {
+  //   image: "/static/images/fallback.png",
+  // },  
 });
 
 module.exports = withPWA(
