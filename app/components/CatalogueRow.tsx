@@ -35,7 +35,7 @@ const CatalogueRow = ({title, movieList}: propsType) => {
         <div ref={reference} className='flex items-center overflow-x-scroll space-x-1 no-scrollbar md:space-x-2'>
           {movieList?.map(movie => <Thumbnail key={movie.id} movie={movie}/>)}
         </div>
-        <div className={`hidden absolute right-0 top-0 z-40 items-center cursor-pointer transition duration-500 hover:bg-stone-950 hover:bg-opacity-50 md:flex md:h-44 md:pb-2 md:items-center lg:h-36`} onClick={() => handleClick(-1)}>
+        <div className={`hidden landscape:hidden absolute right-0 top-0 z-40 items-center cursor-pointer transition duration-500 hover:bg-stone-950 hover:bg-opacity-50 md:flex md:h-44 md:pb-2 md:items-center lg:h-36`} onClick={() => handleClick(-1)}>
           <span className={`clickable drop-shadow-md text-4xl px-3 lg:text-5xl lg:px-4`}>›</span>
         </div>
       </div>
