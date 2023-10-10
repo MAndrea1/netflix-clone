@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+'use client'
+import { useState, useEffect, useRef } from 'react'
 
 // Seems BeforeInstallPromptEvent is not a valid type for TypeScript yet,
 // so it must be added manually, either as an interface or as a type:
@@ -17,21 +18,9 @@ type BeforeInstallPromptEvent = Event & {
 const InstallApp = () => {
   const [installEvent, setInstallEvent] = useState<BeforeInstallPromptEvent  | null>(null)
   const [isInstalled, setIsInstalled] = useState(false);
+  const eventListenerAdded = useRef(false);
 
-  // Adding an eventListener to capture the prompt to install the PWA.
-  // Adding this behavior in the useEffect didn't work, probably because by the time it is fired
-  // the browser still didn't detect the website is a PWA.
-  // So we add this outside the useEffect, but make sure to remove it when the component unmounts.
-  const beforeInstallPromptHandler = (e: Event) => {
-    e.preventDefault();
-    // This variable will save the event for later use.
-    setInstallEvent(e as BeforeInstallPromptEvent);
-  }; 
-  window.addEventListener('beforeinstallprompt', beforeInstallPromptHandler);
 
-  // To trigger the event manually from console:
-  // const event = new Event('beforeinstallprompt');
-  // window.dispatchEvent(event);
 
   useEffect(() => {
     // check if the app is being seen from minimal-ui -meaning the user has installed it-
@@ -39,9 +28,22 @@ const InstallApp = () => {
       setIsInstalled(true)
     }  
 
+    const beforeInstallPromptHandler = (e: BeforeInstallPromptEvent) => {
+      e.preventDefault();
+      // This variable will save the event for later use.
+      setInstallEvent(e as BeforeInstallPromptEvent);
+    };     
+
+    // This won't fire in dev mode, but it does in prod (run start, after having run build)
+    window.addEventListener("beforeinstallprompt", beforeInstallPromptHandler as any);  
+
+    // To trigger the event manually from console:
+    // const event = new Event('beforeinstallprompt');
+    // window.dispatchEvent(event);
+
     return() => {
       // If we unmount this component, the listeners won't be automatically removed. We should remove them explicitly to avoid unexpected behavior.
-      window.removeEventListener('beforeinstallprompt', beforeInstallPromptHandler);
+      window.removeEventListener('beforeinstallprompt', beforeInstallPromptHandler as any);
     }
   }, [isInstalled])
 
