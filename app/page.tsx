@@ -54,7 +54,7 @@ export default async function Home() {
     <>
       <main className="relative flex min-h-screen flex-col">
         <Banner fetchPopular={fetchPopular}/>
-        <section className="px-4 -mt-12 landscape:-mt-2 md:-mt-24 lg:-mt-44 lg:px-20">
+        <section className="px-4 -mt-12 md:-mt-2 lg:-mt-44 lg:px-20">
           <CatalogueRow title="Upcoming" movieList={fetchUpcomingURL}/>
           <CatalogueRow title="Romance" movieList={fetchRomanceURL}/>
           <CatalogueRow title="Science Fiction" movieList={fetchScienceFictionURL}/>

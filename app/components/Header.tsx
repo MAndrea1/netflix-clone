@@ -31,7 +31,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`${isScrolled && 'bg-slate-950'}
+    <header className={`${isScrolled && 'md:bg-slate-950'}
       fixed flex justify-between items-center w-full top-0 z-50 px-4 py-1 md:py-3 lg:px-16 lg:py-4 transition-all bg-gradient-to-b from-slate-950`}>
 
       {/* 

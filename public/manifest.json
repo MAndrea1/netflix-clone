@@ -33,9 +33,18 @@
   ],
   "screenshots": [
     {
-        "src": "images/screenshot.png",
+        "src": "/images/screenshot2.jpg",
+        "type": "image/jpg",
+        "sizes": "1412x729",
+        "form_factor": "wide",
+        "label": "Screenshot 2"
+    },
+    {
+        "src": "/images/screenshot.png",
         "type": "image/png",
-        "sizes": "360x740"
+        "sizes": "1440x2482",
+        "form_factor": "narrow",
+        "label": "Screenshot"
     }
   ]
 }
