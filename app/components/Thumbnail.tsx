@@ -19,7 +19,6 @@ const Thumbnail = ({movie}: movie) => {
   return (
     <>
       {imageLoaded ? (
-        // If the image is in the cache, display it
         <div className='relative rounded cursor-pointer h-24 min-w-[50%] transition md:min-w-[25%] md:h-40 md:hover:scale-105 md:my-1 md:hover:my-1 md:hover:z-30 lg:h-32 lg:min-w-[17%]'>
           <Image 
           src={imageUrl} 

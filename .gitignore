@@ -36,3 +36,4 @@ next-env.d.ts
 
 # notas
 notas.md
+app/components/OldThumbnail.tsx

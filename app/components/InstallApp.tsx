@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
 // Seems BeforeInstallPromptEvent is not a valid type for TypeScript yet,
 // so it must be added manually, either as an interface or as a type:
@@ -15,22 +15,31 @@ type BeforeInstallPromptEvent = Event & {
   prompt(): Promise<void>;
 }
 
+type Outcome = {
+  outcome: string,
+  platform: string
+}
+
 const InstallApp = () => {
   const [installEvent, setInstallEvent] = useState<BeforeInstallPromptEvent  | null>(null)
-  const [isInstalled, setIsInstalled] = useState(false);
-  const eventListenerAdded = useRef(false);
-
-
+  const [isInstalled, setIsInstalled] = useState(true);
+  const [installationAccepted, setInstallationAccepted] = useState(false)
 
   useEffect(() => {
     // check if the app is being seen from minimal-ui -meaning the user has installed it-
-    if (window.matchMedia('(display-mode: minimal-ui)').matches) {
-      setIsInstalled(true)
-    }  
+
+    if (!window.matchMedia('(display-mode: minimal-ui)').matches && !installationAccepted) {
+      console.log('(display-mode: not minimal-ui)')
+      setIsInstalled(false)
+    } else {
+      console.log('(display-mode: minimal-ui)')
+    }
 
     const beforeInstallPromptHandler = (e: BeforeInstallPromptEvent) => {
       e.preventDefault();
       // This variable will save the event for later use.
+      console.log("saving BeforeInstallPromptEvent")
+      console.log(e)
       setInstallEvent(e as BeforeInstallPromptEvent);
     };     
 
@@ -47,10 +56,18 @@ const InstallApp = () => {
     }
   }, [isInstalled])
 
-  const handleInstallClick = () => {
-    installEvent?.prompt();
-    setIsInstalled(true);    
+  const handleInstallClick = async () => {
+    const result = await installEvent?.prompt();
+    console.log(`Install prompt was: ${result}`);
+    console.log(result);
+    if (result && (result as Outcome).outcome === "accepted") {
+      setInstallationAccepted(true);
+      setIsInstalled(true)
+    }
   };    
+
+  console.log('isInstalled:', isInstalled)
+  console.log('installationAccepted:', installationAccepted)
 
   return (<>
         {!isInstalled ? <li className="headerLink bg-red-700 py-1 px-2 rounded hover:text-white hover:bg-red-600"><button onClick={handleInstallClick}>Install App</button></li> : ""}
