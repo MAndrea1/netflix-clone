@@ -4,8 +4,13 @@ Learning from
 https://www.youtube.com/watch?v=ZVnjOPwW4ZA
 https://www.youtube.com/watch?v=cwqNAkwhKqw&t=2587s
 https://www.youtube.com/watch?v=i8PsGvDas-s
+
+Use
 https://developer.themoviedb.org/docs
 https://github.com/ducanhgh/next-pwa/
+https://recoiljs.org/
+https://mui.com/
+https://www.react-hook-form.com/
 
 Notes:
 
