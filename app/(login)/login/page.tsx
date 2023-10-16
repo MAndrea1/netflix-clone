@@ -1,6 +1,8 @@
 'use client'
+
+import useAuth from "@/app/hooks/useAuth";
 import Image from "next/image"
-import { useState } from "react"
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -9,11 +11,21 @@ type Inputs = {
 };
 
 const Login = () => {
-  const [login, setLogin] = useState(false)
-
+  const [askLogin, setAskLogin] = useState(false)
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+  const { signUp, login } = useAuth()
 
-  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);  
+  const onSubmit: SubmitHandler<Inputs> = async (data) =>{
+    if (askLogin){
+      console.log("sign up")
+      await signUp(data.emailField, data.passwordField)
+    }
+    else {
+      console.log("login")
+      await login(data.emailField, data.passwordField)
+    }
+    // await signIn(data.emailField, data.passwordField)
+  }
 
   // console.log(watch("emailField")) // watch input value by passing the name of it
 
@@ -46,7 +58,7 @@ const Login = () => {
           </form>
         <div className="text-sm text-stone-400">
           <span>New to Netflix? </span>
-          <button className="text-white hover:underline">Sign up now.</button>
+          <button className="text-white hover:underline" onClick={() => setAskLogin(true)}>Sign up now.</button>
         </div>
         </div>
         <Image 

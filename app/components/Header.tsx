@@ -7,9 +7,11 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { BellIcon } from '@heroicons/react/24/outline'
 import Link from "next/link"
 import InstallApp from "./InstallApp"
+import useAuth from "../hooks/useAuth"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const { logout } = useAuth()
 
 
   useEffect(() => {
@@ -63,16 +65,17 @@ const Header = () => {
       <div className="flex items-center space-x-4 lg:space-x-6">
         <MagnifyingGlassIcon className="hidden h-6 w-6 sm:inline" />
         <BellIcon className="h-6 w-6" />
-        <Link href={"/"}>
+        {/* <Link href={"/"}> */}
           <Image 
             src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDL_yALlcQAXnZ7Q9Z7KijBP8EsWuymdQl7xv3-W0FwEt2nHlZnQFACQ4ecEfYqTGjd9Y&usqp=CAU"} 
             alt={"User icon"}
             width={40}
             height={40}
             className="cursor-pointer rounded w-8 lg:w-10"
+            onClick={() => {logout()}}
           >
           </Image>
-        </Link>
+        {/* </Link> */}
       </div>
     </header>
   )
