@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { thumnUrlImage } from '../utils/fetchRequests'
 import Image from 'next/image'
 import { Movie } from '@/typings'
+import { useRecoilState, useSetRecoilState } from 'recoil';
+import { currentMovieState, modalState } from '../recoil/atoms/modalAtom';
 
 type movie = {
   movie: Movie
@@ -9,6 +11,8 @@ type movie = {
 
 const Thumbnail = ({movie}: movie) => {
   const [imageLoaded, setImageLoaded] = useState(true);
+  const [showModal, setShowModal ] = useRecoilState(modalState)
+  const setCurrentMovie = useSetRecoilState(currentMovieState)  
 
   const handleImageError = () => {
     setImageLoaded(false);
@@ -28,7 +32,8 @@ const Thumbnail = ({movie}: movie) => {
             objectFit: 'cover',
           }}
           alt={`${movie?.title}`}
-          onError={handleImageError}          
+          onError={handleImageError}    
+          onClick={() => {setShowModal(true); setCurrentMovie(movie)}}      
           ></Image>        
         </div>
       ) : (

@@ -12,6 +12,7 @@ import dataAnimation from '../mockData/apiAnimation.json'
 import { Movie } from "@/typings";
 import CatalogueRow from "../components/CatalogueRow"
 import DisplayScreen from "../components/DisplayScreen"
+import Modal from "../components/Modal"
 
 export default async function Home() {
   let fetchPopular: Movie[];
@@ -21,6 +22,7 @@ export default async function Home() {
   let fetchThrillerURL: Movie[];
   let fetchActionURL: Movie[];
   let fetchAnimationURL: Movie[];
+  let fetchTest: Movie;
   
   if (process.env.DEVELOPMENT_MODE === 'true') {
     // Use mock data for development
@@ -39,7 +41,7 @@ export default async function Home() {
       fetchScienceFictionURL, 
       fetchThrillerURL, 
       fetchActionURL, 
-      fetchAnimationURL] = await Promise.all([
+      fetchAnimationURL, fetchTest] = await Promise.all([
       fetchData(requests.fetchPopularURL, requests.fetchGETOptions),
       fetchData(requests.fetchUpcomingURL, requests.fetchGETOptions),
       fetchData(requests.fetchRomanceURL, requests.fetchGETOptions),
@@ -47,8 +49,10 @@ export default async function Home() {
       fetchData(requests.fetchThrillerURL, requests.fetchGETOptions),
       fetchData(requests.fetchActionURL, requests.fetchGETOptions),
       fetchData(requests.fetchAnimationURL, requests.fetchGETOptions),
+      fetchData(requests.fetchVideo, requests.fetchGETOptions),
     ]);
   }
+
 
   return (
     <>
@@ -64,6 +68,7 @@ export default async function Home() {
         </section>
         <h1><DisplayScreen/></h1>
       </main>
+      <Modal/>
     </>
   )
 }

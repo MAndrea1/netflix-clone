@@ -23,11 +23,13 @@ const requests = {
   fetchThrillerURL: `${BASE_URL}/discover/movie?&language=en-US&sort_by=popularity.desc&page=1&with_genres=53`,
   fetchActionURL: `${BASE_URL}/discover/movie?&language=en-US&sort_by=popularity.desc&page=1&with_genres=28`,
   fetchAnimationURL: `${BASE_URL}/discover/movie?&language=en-US&sort_by=popularity.desc&page=1&with_genres=16`,
+  fetchVideo: `${BASE_URL}/movie/`,
   fetchGETOptions: {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: `Bearer ${BEARER_TOKEN}`
+        Authorization: `Bearer ${BEARER_TOKEN}`,
+        credentials: "omit"
       }
   }
 }

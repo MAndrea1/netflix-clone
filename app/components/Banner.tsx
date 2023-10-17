@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Movie } from '@/typings'
 import { getRandomElement, shortenString } from '../utils/utilFuncions'
 import { baseUrlImage } from '../utils/fetchRequests'
+import InfoButton from './InfoButton'
 
 // Added to avoid the "fetchPopular is not assignable to type 'intrinsicattributes'" error.
 type movieList = {
@@ -30,7 +31,7 @@ const banner = ({fetchPopular}: movieList) => {
         <p className='hidden md:drop-shadow-lg md:flex md:max-w-lg md:text-lg lg:drop-shadow-lg lg:max-w-2xl lg:text-xl'>{shortenString(featuredMovie?.overview, 200)}</p>
         <div className='flex space-x-4 mt-2 md:mt-5 lg:mt-10'>
           <button className='playButton'><span className='text-lg pr-1 md:text-3xl lg:text-4xl md:pr-2'>▶</span>Play</button>
-          <button className='playButton bg-stone-500 hover:bg-stone-600 text-white'><span className='text-base pr-2 md:text-2xl lg:text-3xl md:pr-4'>ⓘ</span>More Info</button>
+          <InfoButton movie={featuredMovie}/>
         </div>
       </div>
     </div>
