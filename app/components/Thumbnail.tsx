@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { thumnUrlImage } from '../utils/fetchRequests'
 import Image from 'next/image'
 import { Movie } from '@/typings'
@@ -37,7 +37,7 @@ const Thumbnail = ({movie}: movie) => {
           ></Image>        
         </div>
       ) : (
-        <div className='bg-black text-white flex items-center p-3 text-center justify-center relative rounded cursor-pointer h-24 min-w-[50%] transition md:min-w-[25%] md:h-40 md:hover:scale-105 md:my-1 md:hover:my-1 md:hover:z-30 lg:h-32 lg:min-w-[17%]'>
+        <div className='bg-black text-white flex items-center p-3 text-center justify-center relative rounded cursor-pointer h-24 min-w-[50%] transition md:min-w-[25%] md:h-40 md:hover:scale-105 md:my-1 md:hover:my-1 md:hover:z-30 lg:h-32 lg:min-w-[17%]' onClick={() => {setShowModal(true); setCurrentMovie(movie)}}>
         {movie?.title || "Image not available"}
       </div>
       )}

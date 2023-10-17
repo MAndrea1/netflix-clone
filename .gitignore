@@ -37,3 +37,5 @@ next-env.d.ts
 # notas
 notas.md
 app/components/OldThumbnail.tsx
+Modal copy.tsx
+Modal copy 2.tsx
