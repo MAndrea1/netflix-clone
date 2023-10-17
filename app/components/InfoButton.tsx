@@ -12,8 +12,6 @@ const InfoButton = ({movie}: movie) => {
   const [showModal, setShowModal ] = useRecoilState(modalState)
   const setCurrentMovie = useSetRecoilState(currentMovieState)
 
-  console.log(showModal)
-
   return (
     <button onClick={() => {setShowModal(true); setCurrentMovie(movie)}} className='playButton bg-stone-500 hover:bg-stone-600 text-white'><span className='text-base pr-2 md:text-2xl lg:text-3xl md:pr-4'>ⓘ</span>More Info</button>
   )

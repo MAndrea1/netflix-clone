@@ -2,6 +2,7 @@
 
 import Banner from "../components/Banner"
 import {requests, fetchData} from "../utils/fetchRequests"
+import dataGenres from '../mockData/apiGenres.json'
 import dataPopular from '../mockData/apiPopular.json'
 import dataUpcoming from '../mockData/apiUpcoming.json'
 import dataRomance from '../mockData/apiRomance.json'
@@ -9,7 +10,7 @@ import dataSF from '../mockData/apiSF.json'
 import dataThriller from '../mockData/apiThriller.json'
 import dataAction from '../mockData/apiAction.json'
 import dataAnimation from '../mockData/apiAnimation.json'
-import { Movie } from "@/typings";
+import { Genre, Movie } from "@/typings";
 import CatalogueRow from "../components/CatalogueRow"
 import DisplayScreen from "../components/DisplayScreen"
 import Modal from "../components/Modal"
@@ -35,7 +36,7 @@ export default async function Home() {
     fetchAnimationURL = dataAnimation.results;
   } else {
     // Fetch real data for production
-    [fetchPopular, 
+    [ fetchPopular, 
       fetchUpcomingURL, 
       fetchRomanceURL, 
       fetchScienceFictionURL, 
@@ -53,7 +54,6 @@ export default async function Home() {
     ]);
   }
 
-
   return (
     <>
       <main className="relative flex min-h-screen flex-col">
@@ -61,10 +61,10 @@ export default async function Home() {
         <section className="px-4 -mt-12 md:-mt-2 lg:-mt-44 lg:px-20">
           <CatalogueRow title="Upcoming" movieList={fetchUpcomingURL}/>
           <CatalogueRow title="Romance" movieList={fetchRomanceURL}/>
-          <CatalogueRow title="Science Fiction" movieList={fetchScienceFictionURL}/>
-          <CatalogueRow title="Thriller" movieList={fetchThrillerURL}/>
           <CatalogueRow title="Action" movieList={fetchActionURL}/>
           <CatalogueRow title="Animation" movieList={fetchAnimationURL}/>
+          <CatalogueRow title="Science Fiction" movieList={fetchScienceFictionURL}/>
+          <CatalogueRow title="Thriller" movieList={fetchThrillerURL}/>
         </section>
         <h1><DisplayScreen/></h1>
       </main>

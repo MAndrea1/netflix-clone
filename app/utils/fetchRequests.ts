@@ -11,10 +11,8 @@ type FetchOptions = {
   };
 }
 
-'/discover/movie?language=en-US&page=1&with_genres=10749'
-'/discover/movie?language=en-US&page=1&with_genres=10749'
-
 const requests = {
+  fetchGenresURL: `${BASE_URL}/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US`,
   fetchPopularURL: `${BASE_URL}/movie/popular?language=en-US&sort_by=popularity.desc&page=1`,
   fetchNowPlayingURL: `${BASE_URL}/movie/now_playing?language=en-US&page=1`,
   fetchUpcomingURL: `${BASE_URL}/movie/upcoming?language=en-US&page=1`,
