@@ -11,6 +11,12 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'assets.nflxext.com',
+        port: '',
+        pathname: '/ffe/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'image.tmdb.org',
         port: '',
         pathname: '/t/p/**',

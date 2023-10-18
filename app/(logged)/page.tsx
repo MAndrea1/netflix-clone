@@ -1,17 +1,17 @@
 // page.tsx
 
-import Banner from "./components/Banner"
-import {requests, fetchData} from "./utils/fetchRequests"
-import dataPopular from './mockData/apiPopular.json'
-import dataUpcoming from './mockData/apiUpcoming.json'
-import dataRomance from './mockData/apiRomance.json'
-import dataSF from './mockData/apiSF.json'
-import dataThriller from './mockData/apiThriller.json'
-import dataAction from './mockData/apiAction.json'
-import dataAnimation from './mockData/apiAnimation.json'
+import Banner from "../components/Banner"
+import {requests, fetchData} from "../utils/fetchRequests"
+import dataPopular from '../mockData/apiPopular.json'
+import dataUpcoming from '../mockData/apiUpcoming.json'
+import dataRomance from '../mockData/apiRomance.json'
+import dataSF from '../mockData/apiSF.json'
+import dataThriller from '../mockData/apiThriller.json'
+import dataAction from '../mockData/apiAction.json'
+import dataAnimation from '../mockData/apiAnimation.json'
 import { Movie } from "@/typings";
-import CatalogueRow from "./components/CatalogueRow"
-import DisplayScreen from "./components/DisplayScreen"
+import CatalogueRow from "../components/CatalogueRow"
+import DisplayScreen from "../components/DisplayScreen"
 
 export default async function Home() {
   let fetchPopular: Movie[];
@@ -67,3 +67,4 @@ export default async function Home() {
     </>
   )
 }
+

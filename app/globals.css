@@ -10,6 +10,9 @@
   body {
     @apply bg-stone-950 text-white
   }
+  .nred {
+    @apply bg-[#e50914] hover:bg-[rgba(229,9,20,0.75)]
+  }
 }
 
 /* 
@@ -22,6 +25,9 @@
   }
   .playButton {
     @apply py-0 px-3 text-xs bg-white hover:bg-stone-300 text-black font-bold rounded shadow-lg flex items-center md:py-1 md:px-4 md:text-lg lg:py-2 lg:px-7 lg:text-xl
+  }
+  .input{ 
+    @apply bg-[#333] text-stone-200 py-4 px-5 text-sm rounded-md
   }
 }
 

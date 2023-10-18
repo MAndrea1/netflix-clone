@@ -4,6 +4,7 @@ import "./globals.css"
 import type { Metadata } from "next";
 import { Inter } from "next/font/google"
 import Header from "./components/Header"
+import { AuthProvider } from "./hooks/useAuth";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,19 +36,19 @@ export const metadata: Metadata = {
   }
 };
 
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header/>
-        {children}
-        {/* lightbox */}
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          {children}
+          {/* lightbox */}
+        </body>
+      </html>
+    </AuthProvider>
   )
 }

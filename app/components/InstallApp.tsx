@@ -29,17 +29,15 @@ const InstallApp = () => {
     // check if the app is being seen from minimal-ui -meaning the user has installed it-
 
     if (!window.matchMedia('(display-mode: minimal-ui)').matches && !installationAccepted) {
-      console.log('(display-mode: not minimal-ui)')
+      // console.log('(display-mode: not minimal-ui)')
       setIsInstalled(false)
     } else {
-      console.log('(display-mode: minimal-ui)')
+      // console.log('(display-mode: minimal-ui)')
     }
 
     const beforeInstallPromptHandler = (e: BeforeInstallPromptEvent) => {
       e.preventDefault();
       // This variable will save the event for later use.
-      console.log("saving BeforeInstallPromptEvent")
-      console.log(e)
       setInstallEvent(e as BeforeInstallPromptEvent);
     };     
 
@@ -58,16 +56,13 @@ const InstallApp = () => {
 
   const handleInstallClick = async () => {
     const result = await installEvent?.prompt();
-    console.log(`Install prompt was: ${result}`);
-    console.log(result);
+    // console.log(`Install prompt was: ${result}`);
+    // console.log(result);
     if (result && (result as Outcome).outcome === "accepted") {
       setInstallationAccepted(true);
       setIsInstalled(true)
     }
   };    
-
-  console.log('isInstalled:', isInstalled)
-  console.log('installationAccepted:', installationAccepted)
 
   return (<>
         {!isInstalled ? <li className="headerLink bg-red-700 py-1 px-2 rounded hover:text-white hover:bg-red-600"><button onClick={handleInstallClick}>Install App</button></li> : ""}
