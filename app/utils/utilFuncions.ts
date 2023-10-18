@@ -3,6 +3,10 @@ export function getRandomElement<T>(array:T[]){
   return array[randomIndex]
 }
 
+export function getRandomIndex<T>(array:T[]){
+  return Math.floor(Math.random() * array.length)
+}
+
 export function shortenString(inputString: string, maxLength: number): string {
   if (inputString.length <= maxLength) {
     return inputString;

@@ -11,6 +11,8 @@ https://github.com/ducanhgh/next-pwa/
 https://recoiljs.org/
 https://mui.com/
 https://www.react-hook-form.com/
+https://firebase.google.com/
+https://www.npmjs.com/package/react-player
 
 Notes:
 

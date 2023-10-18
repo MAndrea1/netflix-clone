@@ -29,6 +29,9 @@
   .input{ 
     @apply bg-[#333] text-stone-200 py-4 px-5 text-sm rounded-md
   }
+  .modalButton{
+    @apply flex h-11 w-11 items-center justify-center rounded-full border-2 border-[grey] bg-[#2a2a2a]/60 transition hover:border-white hover:bg-white/10
+  }
 }
 
 @layer utilities {
