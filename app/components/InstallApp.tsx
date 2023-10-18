@@ -55,6 +55,7 @@ const InstallApp = () => {
   }, [isInstalled])
 
   const handleInstallClick = async () => {
+    console.log("installing...")
     const result = await installEvent?.prompt();
     // console.log(`Install prompt was: ${result}`);
     // console.log(result);

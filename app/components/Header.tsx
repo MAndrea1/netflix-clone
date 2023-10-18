@@ -1,7 +1,7 @@
 'use client'
 // Header.tsx
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { BellIcon } from '@heroicons/react/24/outline'
@@ -11,8 +11,18 @@ import useAuth from "../hooks/useAuth"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLUListElement | null>(null);
+
   const { logout } = useAuth()
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +41,26 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
+
+  useEffect(() => {
+
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    }
+
+    // Attach the event listener
+    if (menuOpen) {
+      document.addEventListener('click', handleClickOutside);
+    } else {
+      document.removeEventListener('click', handleClickOutside);
+    }
+
+    return() => {
+      document.removeEventListener('click', handleClickOutside);
+    }
+  }, [menuOpen])
 
   return (
     <header className={`${isScrolled && 'md:bg-slate-950'}
@@ -51,15 +81,19 @@ const Header = () => {
       {/* 
         Again, here we are hiding the menu and only showing it in bigger screens
       */}
-        <ul className="md:flex space-x-6 items-center">
-          {/* To style multiple elements, we'll create a custom class "headerLink". We'll complete this style in globals.css */}
-          <li className="headerLink"><Link href={"/"}>Home</Link></li>
-          <li className="headerLink">TV Shows</li>
-          <li className="headerLink">Movies</li>
-          <li className="headerLink">New</li>
-          <li className="headerLink">My List</li>
-          <InstallApp/>
-        </ul>
+        <div className="flex items-center">
+          <ul ref={menuRef} className={`md:flex md:space-x-4 items-center ${menuOpen ? 'absolute top-0 pt-3 pb-1 bg-stone-900 bg-opacity-60' : 'hidden'}`}>
+            <li className="headerLink" onClick={() => toggleMenu()}><Link href="/">Home</Link></li>
+            <li className="headerLink" onClick={() => toggleMenu()}><Link href="/">TV Shows</Link></li>
+            <li className="headerLink" onClick={() => toggleMenu()}><Link href="/">Movies</Link></li>
+            <li className="headerLink" onClick={() => toggleMenu()}><Link href="/">New</Link></li>
+            <li className="headerLink" onClick={() => toggleMenu()}><Link href="/">My List</Link></li>
+            <li className="headerLink" onClick={() => toggleMenu()}><InstallApp/></li>
+          </ul>
+          <button className={`md:hidden ${menuOpen ? 'hidden' : 'block'}`} onClick={() => toggleMenu()}>
+            <span className="text-xs ml-2">Browse ▾</span>
+          </button>
+        </div>
       </div>
 
       <div className="flex items-center space-x-4 lg:space-x-6">
