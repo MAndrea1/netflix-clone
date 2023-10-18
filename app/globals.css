@@ -21,7 +21,7 @@
 @layer components {
   .headerLink {
     /* We use @apply to write custom css using utility classes. Ofc we could also write normal css here. */
-    @apply cursor-pointer text-sm text-[#e5e5e5] transition duration-[.4s] hover:text-stone-400;
+    @apply cursor-pointer text-xs py-1 px-3 md:p-0 md:text-sm text-[#e5e5e5] transition duration-[.4s] hover:text-stone-400;
   }
   .playButton {
     @apply py-0 px-3 text-xs bg-white hover:bg-stone-300 text-black font-bold rounded shadow-lg flex items-center md:py-1 md:px-4 md:text-lg lg:py-2 lg:px-7 lg:text-xl
