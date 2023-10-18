@@ -19,6 +19,7 @@ const requests = {
   fetchRomanceURL: `${BASE_URL}/discover/movie?language=en-US&page=1&with_genres=10749`,
   fetchScienceFictionURL: `${BASE_URL}/discover/movie?&language=en-US&sort_by=popularity.desc&page=1&with_genres=878`,
   fetchThrillerURL: `${BASE_URL}/discover/movie?&language=en-US&sort_by=popularity.desc&page=1&with_genres=53`,
+  fetchComedyURL: `${BASE_URL}/discover/movie?&language=en-US&sort_by=popularity.desc&page=1&with_genres=35`,
   fetchActionURL: `${BASE_URL}/discover/movie?&language=en-US&sort_by=popularity.desc&page=1&with_genres=28`,
   fetchAnimationURL: `${BASE_URL}/discover/movie?&language=en-US&sort_by=popularity.desc&page=1&with_genres=16`,
   fetchVideo: `${BASE_URL}/movie/`,
