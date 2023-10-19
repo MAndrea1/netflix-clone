@@ -62,14 +62,14 @@ const Modal = () => {
   return (
     <>
       <ModalMUI
-        open={!user==null && showModal}
+        open={user!==null && showModal}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         className={`${movieState? 'overflow-hidden' : 'overflow-scroll'}`}
         >
         <div className={`absolute w-[100vw] h-[100vh] transform ${movieState? 'bottom-0 right-0': '-translate-x-1/2 md:min-w-[60vw] md:max-w-full lg:w-[60vw] md:h-fit left-1/2 lg:top-1/2 lg:-translate-y-1/2'}`}>
-          <button onClick={handleClose} className={`absolute transition duration-[.4s] right-4 top-4 z-50 h-12 w-12 lg:h-10 lg:w-10 rounded-full bg-slate-950 lg:bg-transparent  ${movieState? 'opacity-20 lg:opacity-0 lg:hover:opacity-100' : 'hover:bg-stone-800 hover:bg-opacity-50'}`}>
+          <button onClick={handleClose} className={`absolute transition duration-[.4s] right-4 top-4 z-50 h-12 w-12 lg:h-10 lg:w-10 rounded-full bg-slate-950 lg:bg-transparent  ${movieState? 'opacity-50 lg:opacity-0 lg:hover:opacity-100' : 'hover:bg-stone-800 hover:bg-opacity-50'}`}>
             <span className='h-6 w-6 select-none'>X</span>
           </button>
           <div className={`flex flex-col bg-stone-950 ${movieState? '' : 'max-h-[70vh]'}`}>

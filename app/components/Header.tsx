@@ -13,8 +13,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLUListElement | null>(null);
-
-  const { logout } = useAuth()
+  const { user, logout, redirectToLogin } = useAuth()
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -62,6 +61,10 @@ const Header = () => {
     }
   }, [menuOpen])
 
+  const handleLogin = () => {
+    console.log("first")
+  }
+
   return (
     <header className={`${isScrolled && 'md:bg-slate-950'}
       fixed flex justify-between items-center w-full top-0 z-50 px-4 py-1 md:py-3 lg:px-16 lg:py-4 transition-all bg-gradient-to-b from-slate-950`}>
@@ -98,18 +101,24 @@ const Header = () => {
 
       <div className="flex items-center space-x-4 lg:space-x-6">
         <MagnifyingGlassIcon className="hidden h-6 w-6 sm:inline" />
-        <BellIcon className="h-6 w-6" />
-        {/* <Link href={"/"}> */}
-          <Image 
-            src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDL_yALlcQAXnZ7Q9Z7KijBP8EsWuymdQl7xv3-W0FwEt2nHlZnQFACQ4ecEfYqTGjd9Y&usqp=CAU"} 
-            alt={"User icon"}
-            width={40}
-            height={40}
-            className="cursor-pointer rounded w-8 lg:w-10"
-            onClick={() => {logout()}}
-          >
-          </Image>
-        {/* </Link> */}
+        {
+          user !== null
+          ? 
+          <>
+            <BellIcon className="h-6 w-6" />
+            <Image 
+              src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDL_yALlcQAXnZ7Q9Z7KijBP8EsWuymdQl7xv3-W0FwEt2nHlZnQFACQ4ecEfYqTGjd9Y&usqp=CAU"} 
+              alt={"User icon"}
+              width={40}
+              height={40}
+              className="cursor-pointer rounded w-8 lg:w-10"
+              onClick={() => {logout()}}
+              >
+            </Image>
+          </>          
+          : <button onClick={redirectToLogin} className="redButton mt-1">Log in</button>
+        }
+
       </div>
     </header>
   )

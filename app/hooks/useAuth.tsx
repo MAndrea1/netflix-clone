@@ -46,7 +46,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log("in first useEf")
       console.log(user)
       if (user) {
         setUser(user)
@@ -114,6 +113,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     setLoading(true)
     signOut(auth).then(() => {
       setUser(null)
+      router.push('/login')
     })    
     .catch((error) => {
       const errorCode = error.code;

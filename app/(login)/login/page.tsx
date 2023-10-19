@@ -17,26 +17,7 @@ const Login = () => {
   const [ loggedUser, setLoggedUser] = useState<User| null>(null)
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
   const { signUp, login } = useAuth()
-  let { user } = useAuth()
   
-  const router = useRouter()
-
-  useEffect(() => {
-    console.log("in login useEffect")
-    console.log(loggedUser)
-    if (loggedUser) {
-      router.push('/')
-    }
-  }, [])  
-
-  useEffect(() => {
-    console.log("in login useEffect user")
-    console.log(user)
-    if (user) {
-      router.push('/')
-    }
-  }, [user])  
-
   const onSubmit: SubmitHandler<Inputs> = async (data) =>{
     if (askLogin){
       console.log("sign in")
