@@ -26,6 +26,7 @@ const InstallApp = () => {
   const [installationAccepted, setInstallationAccepted] = useState(false)
 
   useEffect(() => {
+    console.log("in useEffect InstallApp")
     // check if the app is being seen from minimal-ui -meaning the user has installed it-
 
     if (!window.matchMedia('(display-mode: minimal-ui)').matches && !installationAccepted) {
@@ -36,9 +37,11 @@ const InstallApp = () => {
     }
 
     const beforeInstallPromptHandler = (e: BeforeInstallPromptEvent) => {
+      console.log("beforeInstallPromptHandler triggered")
       e.preventDefault();
       // This variable will save the event for later use.
       setInstallEvent(e as BeforeInstallPromptEvent);
+      console.log(e)
     };     
 
     // This won't fire in dev mode, but it does in prod (run start, after having run build)
@@ -52,13 +55,16 @@ const InstallApp = () => {
       // If we unmount this component, the listeners won't be automatically removed. We should remove them explicitly to avoid unexpected behavior.
       window.removeEventListener('beforeinstallprompt', beforeInstallPromptHandler as any);
     }
+
   }, [isInstalled])
+  
+
 
   const handleInstallClick = async () => {
     console.log("installing...")
     const result = await installEvent?.prompt();
-    // console.log(`Install prompt was: ${result}`);
-    // console.log(result);
+    console.log(`Install prompt was: ${result}`);
+    console.log(result);
     if (result && (result as Outcome).outcome === "accepted") {
       setInstallationAccepted(true);
       setIsInstalled(true)
@@ -66,7 +72,7 @@ const InstallApp = () => {
   };    
 
   return (<>
-        {!isInstalled ? <li className="headerLink bg-red-700 py-1 px-2 rounded hover:text-white hover:bg-red-600"><button onClick={handleInstallClick}>Install App</button></li> : ""}
+        {!isInstalled ? <button onClick={handleInstallClick} className={`headerLink bg-red-700 py-1 px-2 rounded hover:text-white hover:bg-red-600 ${installEvent?'':'hidden'}`}>Install App</button> : ""}
     </>
   )
 }

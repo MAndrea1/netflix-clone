@@ -1,8 +1,10 @@
 'use client'
 
 import useAuth from "@/app/hooks/useAuth";
+import { User } from "firebase/auth";
 import Image from "next/image"
-import { useState } from "react";
+import { useRouter } from "next/navigation"
+import { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -11,18 +13,38 @@ type Inputs = {
 };
 
 const Login = () => {
-  const [ askLogin, setAskLogin] = useState(false)
+  const [ askLogin, setAskLogin] = useState(true)
+  const [ loggedUser, setLoggedUser] = useState<User| null>(null)
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
   const { signUp, login } = useAuth()
+  let { user } = useAuth()
+  
+  const router = useRouter()
+
+  useEffect(() => {
+    console.log("in login useEffect")
+    console.log(loggedUser)
+    if (loggedUser) {
+      router.push('/')
+    }
+  }, [])  
+
+  useEffect(() => {
+    console.log("in login useEffect user")
+    console.log(user)
+    if (user) {
+      router.push('/')
+    }
+  }, [user])  
 
   const onSubmit: SubmitHandler<Inputs> = async (data) =>{
     if (askLogin){
-      console.log("sign up")
-      await signUp(data.emailField, data.passwordField)
+      console.log("sign in")
+      await login(data.emailField, data.passwordField)
     }
     else {
-      console.log("login")
-      await login(data.emailField, data.passwordField)
+      console.log("sign up")
+      await signUp(data.emailField, data.passwordField)
     }
     // await signIn(data.emailField, data.passwordField)
   }
@@ -42,7 +64,7 @@ const Login = () => {
         <div className="mt-20 px-5 w-full md:w-[30rem] md:bg-black md:bg-opacity-80 md:p-20 md:mt-0">
           <form className="pb-5 md:pb-20" onSubmit={handleSubmit(onSubmit)}>
             <fieldset>
-              <legend className="text-3xl font-semibold">{askLogin ? "Sign In" : "Sign up"}</legend>
+              <legend className="text-3xl font-semibold">{askLogin ? "Sign in" : "Sign up"}</legend>
               <div className="flex flex-col my-8 space-y-4">
                 <label>
                   <input type="email" placeholder="Email" className={`input w-full ${errors.emailField && "border-b-2 border-orange-500"}`} defaultValue={""}  {...register("emailField", { required: true })} />

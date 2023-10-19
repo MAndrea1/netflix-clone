@@ -19,6 +19,7 @@ type AuthType = {
   logout: () => Promise<void>
   error: string | null
   loading: boolean
+  redirectToLogin: () => void
 }
 
 const AuthContext = createContext<AuthType>({
@@ -27,7 +28,8 @@ const AuthContext = createContext<AuthType>({
   login: async () => {},
   logout: async () => {},
   error: null,
-  loading: false
+  loading: false,
+  redirectToLogin: () => {}
 })
 
 type AuthProviderProps = {
@@ -44,6 +46,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
+      console.log("in first useEf")
+      console.log(user)
       if (user) {
         setUser(user)
         setLoading(false)
@@ -52,11 +56,17 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         setLoading(false)
         // currently not working due to a bug
         // redirect('/login')
-        router.push('/login')
+        // router.push('/login')
       }
     })
     setFirstLoading(false)
   }, [auth])
+
+  const redirectToLogin = () => {
+    if (user === null) {
+      router.push('/login')
+    }
+  }
   
   const signUp = async (email: string, password: string) => {
     setLoading(true)
@@ -121,7 +131,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     error,
     signUp,
     login,
-    logout
+    logout,
+    redirectToLogin
   }
 
   return (
