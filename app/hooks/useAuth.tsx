@@ -19,6 +19,9 @@ type AuthType = {
   logout: () => Promise<void>
   error: string | null
   loading: boolean
+  userExists: boolean
+  redirectToLogin: (user: User | null) => void
+  redirectToMain: (user: User | null) => void
 }
 
 const AuthContext = createContext<AuthType>({
@@ -27,7 +30,11 @@ const AuthContext = createContext<AuthType>({
   login: async () => {},
   logout: async () => {},
   error: null,
-  loading: false
+  loading: false,
+  userExists: false,
+  redirectToLogin: () => {},
+  redirectToMain: () => {},
+
 })
 
 type AuthProviderProps = {
@@ -39,6 +46,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<User| null>(null)
   const [error, setError] = useState(null)
   const [firstLoading, setFirstLoading] = useState(false)
+  const [userExists, setUserExists] = useState(false)
 
   const router = useRouter()
 
@@ -46,17 +54,30 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user)
+        setUserExists(true)
         setLoading(false)
       } else {
         setUser(null)
         setLoading(false)
         // currently not working due to a bug
         // redirect('/login')
-        router.push('/login')
+        // router.push('/login')
       }
     })
     setFirstLoading(false)
   }, [auth])
+
+  const redirectToLogin = (user: User | null) => {
+    if (user === null) {
+      router.push('/login')
+    }
+  }
+
+  const redirectToMain = (user: User | null) => {
+    if (user !== null) {
+      router.push('/')
+    }
+  }
   
   const signUp = async (email: string, password: string) => {
     setLoading(true)
@@ -104,6 +125,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     setLoading(true)
     signOut(auth).then(() => {
       setUser(null)
+      router.push('/login')
     })    
     .catch((error) => {
       const errorCode = error.code;
@@ -121,7 +143,10 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     error,
     signUp,
     login,
-    logout
+    logout,
+    redirectToLogin,
+    redirectToMain,
+    userExists
   }
 
   return (

@@ -32,6 +32,9 @@
   .modalButton{
     @apply flex h-11 w-11 items-center justify-center rounded-full border-2 border-[grey] bg-[#2a2a2a]/60 transition hover:border-white hover:bg-white/10
   }
+  .redButton {
+    @apply cursor-pointer text-xs md:text-sm text-[#e5e5e5] transition duration-[.4s] bg-red-700 py-1 px-2 rounded hover:text-white hover:bg-red-600
+  }
 }
 
 @layer utilities {
