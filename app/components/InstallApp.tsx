@@ -26,7 +26,6 @@ const InstallApp = () => {
   const [installationAccepted, setInstallationAccepted] = useState(false)
 
   useEffect(() => {
-    console.log("in useEffect InstallApp")
     // check if the app is being seen from minimal-ui -meaning the user has installed it-
 
     if (!window.matchMedia('(display-mode: minimal-ui)').matches && !installationAccepted) {
@@ -37,11 +36,9 @@ const InstallApp = () => {
     }
 
     const beforeInstallPromptHandler = (e: BeforeInstallPromptEvent) => {
-      console.log("beforeInstallPromptHandler triggered")
       e.preventDefault();
       // This variable will save the event for later use.
       setInstallEvent(e as BeforeInstallPromptEvent);
-      console.log(e)
     };     
 
     // This won't fire in dev mode, but it does in prod (run start, after having run build)
@@ -58,7 +55,6 @@ const InstallApp = () => {
 
   }, [isInstalled])
   
-
 
   const handleInstallClick = async () => {
     console.log("installing...")

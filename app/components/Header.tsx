@@ -116,7 +116,7 @@ const Header = () => {
               >
             </Image>
           </>          
-          : <button onClick={redirectToLogin} className="redButton mt-1">Log in</button>
+          : <button onClick={() =>redirectToLogin(user)} className="redButton mt-1">Log in</button>
         }
 
       </div>

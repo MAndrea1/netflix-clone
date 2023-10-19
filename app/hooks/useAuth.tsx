@@ -19,7 +19,9 @@ type AuthType = {
   logout: () => Promise<void>
   error: string | null
   loading: boolean
-  redirectToLogin: () => void
+  userExists: boolean
+  redirectToLogin: (user: User | null) => void
+  redirectToMain: (user: User | null) => void
 }
 
 const AuthContext = createContext<AuthType>({
@@ -29,7 +31,10 @@ const AuthContext = createContext<AuthType>({
   logout: async () => {},
   error: null,
   loading: false,
-  redirectToLogin: () => {}
+  userExists: false,
+  redirectToLogin: () => {},
+  redirectToMain: () => {},
+
 })
 
 type AuthProviderProps = {
@@ -41,14 +46,15 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<User| null>(null)
   const [error, setError] = useState(null)
   const [firstLoading, setFirstLoading] = useState(false)
+  const [userExists, setUserExists] = useState(false)
 
   const router = useRouter()
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(user)
       if (user) {
         setUser(user)
+        setUserExists(true)
         setLoading(false)
       } else {
         setUser(null)
@@ -61,9 +67,15 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     setFirstLoading(false)
   }, [auth])
 
-  const redirectToLogin = () => {
+  const redirectToLogin = (user: User | null) => {
     if (user === null) {
       router.push('/login')
+    }
+  }
+
+  const redirectToMain = (user: User | null) => {
+    if (user !== null) {
+      router.push('/')
     }
   }
   
@@ -132,7 +144,9 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     signUp,
     login,
     logout,
-    redirectToLogin
+    redirectToLogin,
+    redirectToMain,
+    userExists
   }
 
   return (

@@ -3,7 +3,6 @@
 import useAuth from "@/app/hooks/useAuth";
 import { User } from "firebase/auth";
 import Image from "next/image"
-import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -16,15 +15,17 @@ const Login = () => {
   const [ askLogin, setAskLogin] = useState(true)
   const [ loggedUser, setLoggedUser] = useState<User| null>(null)
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-  const { signUp, login } = useAuth()
+  const { signUp, login, redirectToMain, user, userExists } = useAuth()
+
+  useEffect(() => {
+    redirectToMain(user)
+  }, [userExists])
   
   const onSubmit: SubmitHandler<Inputs> = async (data) =>{
     if (askLogin){
-      console.log("sign in")
       await login(data.emailField, data.passwordField)
     }
     else {
-      console.log("sign up")
       await signUp(data.emailField, data.passwordField)
     }
     // await signIn(data.emailField, data.passwordField)

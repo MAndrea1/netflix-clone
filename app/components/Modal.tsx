@@ -34,7 +34,7 @@ const Modal = () => {
   useEffect(() => {
     if(!currentMovie) return
 
-    redirectToLogin()
+    redirectToLogin(user)
 
     async function fetchData() {
       const data = await fetch(
