@@ -15,7 +15,7 @@ const Login = () => {
   const [ askLogin, setAskLogin] = useState(true)
   const [ loggedUser, setLoggedUser] = useState<User| null>(null)
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-  const { signUp, login, redirectToMain, user, userExists } = useAuth()
+  const { signUp, login, redirectToMain, user, userExists, error, setError } = useAuth()
 
   useEffect(() => {
     redirectToMain(user)
@@ -28,7 +28,11 @@ const Login = () => {
     else {
       await signUp(data.emailField, data.passwordField)
     }
-    // await signIn(data.emailField, data.passwordField)
+  }
+
+  const toggleAskLogin = () => {
+    setError('')
+    setAskLogin(!askLogin)
   }
 
   // console.log(watch("emailField")) // watch input value by passing the name of it
@@ -50,7 +54,7 @@ const Login = () => {
               <div className="flex flex-col my-8 space-y-4">
                 <label>
                   <input type="email" placeholder="Email" className={`input w-full ${errors.emailField && "border-b-2 border-orange-500"}`} defaultValue={""}  {...register("emailField", { required: true })} />
-                  {errors.emailField && <div className="text-xs text-orange-500 mt-2">Please enter a valid email</div>}
+                  {errors.emailField  && <div className="text-xs text-orange-500 mt-2">Please enter a valid email</div>}
                 </label>
                 <label>
                   <input type="password" placeholder="Password" className={`input w-full ${errors.emailField && "border-b-2 border-orange-500"}`} {...register("passwordField", { required: true })}/>
@@ -58,11 +62,13 @@ const Login = () => {
                 </label>
               </div>
               <button type="submit" className="nred py-4 px-3 font-semibold rounded md w-full">{askLogin ? "Sign in" : "Sign up"}</button>
+              {error === "auth/invalid-login-credentials" && <div className="text-xs text-orange-500 mt-2">Invalid email or password</div>}              
+              {error === "auth/email-already-in-use" && <div className="text-xs text-orange-500 mt-2">This email is already registered. <br/>Are you trying to <button className="underline" onClick={() => toggleAskLogin()}>log in</button>?</div>}              
             </fieldset>
           </form>
         <div className="text-sm text-stone-400">
           <span>{askLogin ? "New to Netflix? " : "Already have an account? "}</span>
-          <button className="text-white hover:underline" onClick={() => setAskLogin(!askLogin)}>{askLogin ? "Sign up now" : "Log in"}</button>
+          <button className="text-white hover:underline" onClick={() => toggleAskLogin()}>{askLogin ? "Sign up now" : "Log in"}</button>
         </div>
         </div>
         <Image 
