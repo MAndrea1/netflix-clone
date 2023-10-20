@@ -70,7 +70,6 @@ export default async function Home() {
           <CatalogueRow title="Science Fiction" movieList={fetchScienceFictionURL}/>
           <CatalogueRow title="Thriller" movieList={fetchThrillerURL}/>
         </section>
-        <h1><DisplayScreen/></h1>
       </main>
       <Modal/>
     </>
