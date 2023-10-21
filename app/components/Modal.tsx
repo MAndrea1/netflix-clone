@@ -10,6 +10,8 @@ import { PlusIcon, SpeakerXMarkIcon, HandThumbUpIcon, SpeakerWaveIcon } from '@h
 import { Genre } from '@/typings';
 import { getRandomIndex } from '../utils/utilFuncions';
 import useAuth from '../hooks/useAuth';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 type fetchedVideos = {
   name: string,
@@ -24,7 +26,9 @@ const Modal = () => {
   const [trailer, setTrailer] = useState("")
   const [genres, setGenres] = useState<Genre[]>([])
   const [muted, setMuted] = useState(true)
-  const { user, redirectToLogin } = useAuth()
+  const {user, redirectToLogin } = useAuth()
+  const [addToList, setAddToList] = useState(false)
+  const [fav, setFav] = useState(false)
 
   const handleClose = () => {
     setMovieState(false)
@@ -87,8 +91,8 @@ const Modal = () => {
                 <div className="flex flex-row justify-between items-center">
                   <div className='flex flex-row h-12 space-x-3 items-center'>
                     <button onClick={() => setMovieState(true)} className='flex items-center text-black bg-white rounded-sm font-bold px-10 py-2'>▶ Play</button>
-                    <PlusIcon className='h-9 w-9 modalButton'/>
-                    <HandThumbUpIcon className='h-9 w-9 modalButton'/>
+                    <PlusIcon onClick={() => setAddToList(!addToList)} className={`h-9 w-9 modalButton ${addToList ? 'hover:border-green-800 hover:bg-green-500/10 border-green-600 bg-green-600/10 text-green-600' : ''}`}/>
+                    <HandThumbUpIcon onClick={() => setFav(!fav)} className={`h-9 w-9 modalButton ${fav ? 'hover:border-green-800 hover:bg-green-500/10 border-green-600 bg-green-600/10 text-green-600' : ''}`}/>
                   </div>
                   <div onClick={() => setMuted(!muted)}>
                     {muted 

@@ -1,7 +1,6 @@
 'use client'
 
 import useAuth from "@/app/hooks/useAuth";
-import { User } from "firebase/auth";
 import Image from "next/image"
 import { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -13,7 +12,6 @@ type Inputs = {
 
 const Login = () => {
   const [ askLogin, setAskLogin] = useState(true)
-  const [ loggedUser, setLoggedUser] = useState<User| null>(null)
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
   const { signUp, login, redirectToMain, user, userExists, error, setError } = useAuth()
 
