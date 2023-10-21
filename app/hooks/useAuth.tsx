@@ -22,6 +22,7 @@ type AuthType = {
   userExists: boolean
   redirectToLogin: (user: User | null) => void
   redirectToMain: (user: User | null) => void
+  setError: (error: string) => void
 }
 
 const AuthContext = createContext<AuthType>({
@@ -34,7 +35,7 @@ const AuthContext = createContext<AuthType>({
   userExists: false,
   redirectToLogin: () => {},
   redirectToMain: () => {},
-
+  setError: () => {}
 })
 
 type AuthProviderProps = {
@@ -44,7 +45,7 @@ type AuthProviderProps = {
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [loading, setLoading] = useState(false)
   const [user, setUser] = useState<User| null>(null)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState("")
   const [firstLoading, setFirstLoading] = useState(false)
   const [userExists, setUserExists] = useState(false)
 
@@ -95,7 +96,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       const errorMessage = error.message;
       console.warn(errorCode)
       console.warn(errorMessage)
-      alert(errorMessage)
+      setError(errorCode)
     })
     .finally(() => setLoading(false))
   }
@@ -116,7 +117,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       const errorMessage = error.message;
       console.warn(errorCode)
       console.warn(errorMessage)
-      alert(errorMessage)
+      setError(errorCode)      
     })
     .finally(() => setLoading(false))
   }
@@ -132,7 +133,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       const errorMessage = error.message;
       console.warn(errorCode)
       console.warn(errorMessage)
-      alert(errorMessage)
+      setError(errorCode)
     })
     .finally(() => setLoading(false))
   }
@@ -146,7 +147,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     logout,
     redirectToLogin,
     redirectToMain,
-    userExists
+    userExists,
+    setError
   }
 
   return (

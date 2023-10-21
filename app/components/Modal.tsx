@@ -10,6 +10,8 @@ import { PlusIcon, SpeakerXMarkIcon, HandThumbUpIcon, SpeakerWaveIcon } from '@h
 import { Genre } from '@/typings';
 import { getRandomIndex } from '../utils/utilFuncions';
 import useAuth from '../hooks/useAuth';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 type fetchedVideos = {
   name: string,
@@ -24,7 +26,9 @@ const Modal = () => {
   const [trailer, setTrailer] = useState("")
   const [genres, setGenres] = useState<Genre[]>([])
   const [muted, setMuted] = useState(true)
-  const { user, redirectToLogin } = useAuth()
+  const {user, redirectToLogin } = useAuth()
+  const [addToList, setAddToList] = useState(false)
+  const [fav, setFav] = useState(false)
 
   const handleClose = () => {
     setMovieState(false)
@@ -68,12 +72,12 @@ const Modal = () => {
         aria-describedby="modal-modal-description"
         className={`${movieState? 'overflow-hidden' : 'overflow-scroll'}`}
         >
-        <div className={`absolute w-[100vw] h-[100vh] transform ${movieState? 'bottom-0 right-0': '-translate-x-1/2 md:min-w-[60vw] md:max-w-full lg:w-[60vw] md:h-fit left-1/2 lg:top-1/2 lg:-translate-y-1/2'}`}>
-          <button onClick={handleClose} className={`absolute transition duration-[.4s] right-4 top-4 z-50 h-12 w-12 lg:h-10 lg:w-10 rounded-full bg-slate-950 lg:bg-transparent  ${movieState? 'opacity-50 lg:opacity-0 lg:hover:opacity-100' : 'hover:bg-stone-800 hover:bg-opacity-50'}`}>
+        <div className={`absolute w-[100vw] h-[100vh] transform ${movieState? '': '-translate-x-1/2 md:min-w-[60vw] md:max-w-full lg:w-[60vw] md:h-fit left-1/2 lg:top-1/2 lg:-translate-y-1/2'}`}>
+          <button onClick={handleClose} className={`absolute transition duration-[.4s] right-4 top-4 z-50 h-12 w-12 lg:h-10 lg:w-10 rounded-full bg-slate-950 lg:bg-transparent  ${movieState? 'opacity-50 lg:opacity-0 hover:opacity-100' : 'hover:bg-stone-800 hover:bg-opacity-50'}`}>
             <span className='h-6 w-6 select-none'>X</span>
           </button>
-          <div className={`flex flex-col bg-stone-950 ${movieState? '' : 'max-h-[70vh]'}`}>
-            <div className={`aspect-video ${movieState? 'w-[100vw] h-[100vh]' : 'lg:w-[60vw]'}`}>
+          <div className={`flex z-50 justify-center flex-col bg-stone-950 ${movieState? 'w-[100dvw] h-[100dvh]' : 'max-h-[70vh]'}`}>
+            <div className={`aspect-video ${movieState? '' : 'lg:w-[60vw]'}`}>
               <ReactPlayer 
               url={`https://www.youtube.com/watch?v=${trailer}`}
               width="100%"
@@ -87,8 +91,8 @@ const Modal = () => {
                 <div className="flex flex-row justify-between items-center">
                   <div className='flex flex-row h-12 space-x-3 items-center'>
                     <button onClick={() => setMovieState(true)} className='flex items-center text-black bg-white rounded-sm font-bold px-10 py-2'>▶ Play</button>
-                    <PlusIcon className='h-9 w-9 modalButton'/>
-                    <HandThumbUpIcon className='h-9 w-9 modalButton'/>
+                    <PlusIcon onClick={() => setAddToList(!addToList)} className={`h-9 w-9 modalButton ${addToList ? 'hover:border-green-800 hover:bg-green-500/10 border-green-600 bg-green-600/10 text-green-600' : ''}`}/>
+                    <HandThumbUpIcon onClick={() => setFav(!fav)} className={`h-9 w-9 modalButton ${fav ? 'hover:border-green-800 hover:bg-green-500/10 border-green-600 bg-green-600/10 text-green-600' : ''}`}/>
                   </div>
                   <div onClick={() => setMuted(!muted)}>
                     {muted 
