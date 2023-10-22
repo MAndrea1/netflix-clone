@@ -71,7 +71,6 @@ export default async function Home() {
           <CatalogueRow title="Thriller" movieList={fetchThrillerURL}/>
         </section>
       </main>
-      <Modal/>
     </>
   )
 }

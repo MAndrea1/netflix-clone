@@ -87,10 +87,10 @@ const Header = () => {
         <div className="flex items-center">
           <ul ref={menuRef} className={`md:flex md:space-x-4 items-center ${menuOpen ? 'absolute top-0 pt-3 pb-1 bg-stone-900 bg-opacity-60' : 'hidden'}`}>
             <li className="headerLink" onClick={() => closeMenu()}><Link href="/">Home</Link></li>
-            <li className="headerLink" onClick={() => closeMenu()}><Link href="/">TV Shows</Link></li>
-            <li className="headerLink" onClick={() => closeMenu()}><Link href="/">Movies</Link></li>
-            <li className="headerLink" onClick={() => closeMenu()}><Link href="/">New</Link></li>
-            <li className="headerLink" onClick={() => closeMenu()}><Link href="/">My List</Link></li>
+            <li className="headerLink" onClick={() => closeMenu()}><Link href="/tv">TV Shows</Link></li>
+            <li className="headerLink" onClick={() => closeMenu()}><Link href="/movies">Movies</Link></li>
+            <li className="headerLink" onClick={() => closeMenu()}><Link href="/new">New</Link></li>
+            <li className="headerLink" onClick={() => closeMenu()}><Link href="/upcoming">Upcoming</Link></li>
             <li className="headerLink" onClick={() => closeMenu()}><InstallApp/></li>
           </ul>
           <button className={`md:hidden ${menuOpen ? 'hidden' : 'block'}`} onClick={() => toggleMenu()}>
