@@ -62,6 +62,7 @@ const Login = () => {
               <button type="submit" className="nred py-4 px-3 font-semibold rounded md w-full">{askLogin ? "Sign in" : "Sign up"}</button>
               {error === "auth/invalid-login-credentials" && <div className="text-xs text-orange-500 mt-2">Invalid email or password</div>}              
               {error === "auth/email-already-in-use" && <div className="text-xs text-orange-500 mt-2">This email is already registered. <br/>Are you trying to <button className="underline" onClick={() => toggleAskLogin()}>log in</button>?</div>}              
+              {error === "auth/weak-password" && <div className="text-xs text-orange-500 mt-2">Password should be at least 6 characters</div>}                           
             </fieldset>
           </form>
         <div className="text-sm text-stone-400">
