@@ -12,11 +12,19 @@ type movie = {
 const Thumbnail = ({movie}: movie) => {
   const [imageLoaded, setImageLoaded] = useState(true);
   const [showModal, setShowModal ] = useRecoilState(modalState)
-  const setCurrentMovie = useSetRecoilState(currentMovieState)  
+  const [currentMovie, setCurrentMovie]= useRecoilState(currentMovieState)  
 
   const handleImageError = () => {
     setImageLoaded(false);
   };
+
+  const goModal = () => {
+    console.log("go modal")
+    setShowModal(true)
+    setCurrentMovie(movie)
+    console.log(showModal)
+    console.log(currentMovie)
+  }
 
   const imageUrl: string = `${thumnUrlImage + movie?.backdrop_path || movie?.poster_path}`;
 
@@ -33,7 +41,7 @@ const Thumbnail = ({movie}: movie) => {
           }}
           alt={`${movie?.title}`}
           onError={handleImageError}    
-          onClick={() => {setShowModal(true); setCurrentMovie(movie)}}      
+          onClick={goModal}      
           ></Image>        
         </div>
       ) : (
