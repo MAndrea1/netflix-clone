@@ -5,6 +5,7 @@ import Modal from "../components/Modal"
 
 import Header from "../components/Header"
 import { RecoilRoot } from "recoil"
+import Footer from "../components/Footer"
 
 export default function RootLayout({
   children,
@@ -15,6 +16,7 @@ export default function RootLayout({
     <RecoilRoot>
       <Header />
       {children}
+      <Footer/>
       <Modal/>
     </RecoilRoot>
   )
